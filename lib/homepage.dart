@@ -29,6 +29,52 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Container(
+          color: Colors.deepPurple[200],
+          child: ListView(
+            children: [
+              DrawerHeader(
+                child: Center(
+                  child: Text(
+                    'P A I Z A N A ',
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
+
+                /* Icon(
+                Icons.home,
+                size: 50,
+              ) */
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text(
+                  'Home',
+                  style: TextStyle(fontSize: 20),
+                ),
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => UserHome()));
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.person),
+                trailing: Icon(Icons.verified),
+                title: Text(
+                  'Account',
+                  style: TextStyle(fontSize: 20),
+                ),
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => UserAccount()));
+                },
+              )
+            ],
+          ),
+        ),
+      ),
+      // endDrawer: Drawer(),
       appBar: AppBar(
         title: Text('Paizana Bank'),
         centerTitle: true,

@@ -10,10 +10,13 @@ class UserAccount extends StatefulWidget {
 class _UserAccountState extends State<UserAccount> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Account',
-        style: TextStyle(fontSize: 50),
+    return Scaffold(
+      backgroundColor: Colors.blueAccent,
+      body: Center(
+        child: Text(
+          'Account',
+          style: TextStyle(fontSize: 50),
+        ),
       ),
     );
   }
